@@ -1,0 +1,25 @@
+package main;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+
+    System.out.println("Veuillez entrer, dans l'ordre, le nmbre à diviser et le diviseur");
+    Scanner recuperation = new Scanner(System.in) ;
+    int N = recuperation.nextInt() ;
+    int d = recuperation.nextInt() ;
+
+    //calcul du quotient q et du reste r
+        int n = N ;
+        int q = 0 ;
+        while (n>=d) {
+            n=n-d ;
+            q=q+1 ;
+        }
+        int r=n ;
+    //affichage des résultats
+        System.out.println("Le quotien de la divison de "+N+" par "+d+" vaut : "+q+" et il reste "+r+"");
+    }
+}
