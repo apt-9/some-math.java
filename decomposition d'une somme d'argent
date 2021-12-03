@@ -1,0 +1,36 @@
+package main;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+
+        System.out.println("Veuillez entrer une somme d'argent à décomposer");
+        Scanner recuperation = new Scanner(System.in) ;
+
+        int N = recuperation.nextInt() ;
+        int n = N ;
+        int p1 = 0 ;
+        int p2 = 0 ;
+        int p5 = 0 ;
+        int p10 = 0 ;
+        while (n>=10) {
+            n = n - 10 ;
+            p10 = p10 + 1;
+        }
+        while (n>=5){
+            n = n - 5 ;
+            p5 = p5 + 1 ;
+        }
+        while (n>=2) {
+            n = n - 2 ;
+            p2 = p2 + 1 ;
+        }
+        while (n>=1) {
+            n = n - 1 ;
+            p1 = p1 + 1 ;
+        }
+        System.out.println("Pour avoir la somme "+N+", il faut "+p10+" billets de 10 euros, "+p5+" billets de 5 euros, "+p2+" pièces de 2 euros et "+p1+" pièce de 1 euro");
+    }
+    }
