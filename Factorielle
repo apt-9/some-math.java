@@ -1,0 +1,20 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        System.out.println("Veuillez entrer un nombre entier");
+        Scanner recuperation =new Scanner(System.in) ;
+        int N = recuperation.nextInt() ;
+        //calcul de factorielle
+        int n=N ;
+        int r=1 ;
+        for(int i=1; i<=n ;++i) {
+            r=r*i ;
+        }
+        System.out.println(N+" ! = "+r);
+    }
+ }
