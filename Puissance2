@@ -1,0 +1,21 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("Veuillez entrer le nombre et son exposant séparés par un espace");
+        Scanner recuperation =new Scanner(System.in) ;
+        int N = recuperation.nextInt() ;
+        int exp = recuperation.nextInt() ;
+        //calcul de la puissance
+        
+        int r=1 ;
+        for(int i=1; i<=exp ;++i) {
+            r=r*N ;
+        }
+        System.out.println(N+"puissance "+ exp+" = "+r);
+    }
+}
