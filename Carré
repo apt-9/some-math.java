@@ -1,0 +1,21 @@
+package main;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+
+        System.out.println("Veuillez entrer un nombre et la précision souhaitée (1 , 0.1 , 0.01 , 0.001)");
+        Scanner recuperation=new Scanner(System.in) ;
+        double n = recuperation.nextDouble() ;
+        double p = recuperation.nextDouble() ;
+
+        //calcul du quotient q et du reste r
+        double r = 0 ;
+        while (r*r<=n){r=r+p ;}
+        r = r-p ;
+        //affichage des résultats
+        System.out.println("La racine carrée de "+n+" vaut "+r+"");
+    }
+}
