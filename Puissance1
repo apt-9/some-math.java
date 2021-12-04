@@ -1,0 +1,25 @@
+package main;
+
+public class Main {
+    public static void main(String args[]){
+        int nombre = 7;
+        int puissance = 3;
+        int resultat = puissances(nombre,puissance);
+        System.out.println(nombre+"^"+puissance+"="+ resultat);
+    }
+    static int puissances(int nb, int puissance){
+        int réponse = 1;
+        if(nb > 0 && puissance==0){
+            return réponse ;
+        }
+        else if(nb == 0 && puissance>=1){
+            return 0;
+        }
+        else{
+            for(int i = 1; i<= puissance; i++){
+                réponse = réponse*nb;
+            }
+            return réponse;
+        }
+    }
+}
