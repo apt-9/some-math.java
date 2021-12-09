@@ -1,0 +1,26 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Entrez le numéro du terme de la suite de Fibonacci que vous souhaitez");
+        Scanner recuperation =new Scanner(System.in) ;
+        int n = recuperation.nextInt() ;
+        // write your code here
+        int N = 2 ;
+        int U0 = 1 ;
+        int U1 = 1 ;
+
+        if (n==1 || n==2) {System.out.println("Le terme numéro "+n+" de la suite de Fibonacci est: 1");}
+        else {
+            while(N<n){
+                int U = U0 + U1 ;
+                U0 = U1;
+                U1 = U0 ;
+                ++N ;
+            }
+            System.out.println("Le terme numéro "+n+" de la suite de Fibonacci est :"+ U1);
+        }
+    }
