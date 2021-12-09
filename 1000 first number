@@ -8,18 +8,27 @@ public class Main {
         // write your code here
 
 
-
-        int c = 1 ;
-        System.out.println("N"+c+" ; "+2) ;
-        int N = 3 ;
+        int c = 1;
+        System.out.println("N" + c + " ; " + 2);
+        int N = 3;
 
         //test
 
-        while (c<1000) {
-            boolean rep = true ;
-            for(int i=2; i<N ;++i) {
-                if(N%i==0)rep=false ; break ;}
-        }
+        while (c < 1000) {
+            boolean rep = true;
+            for (int i = 2; i < N; ++i) {
+                if (N % i == 0) {
+                    rep = false;
+                    break;
+                }
+            }
 
-        if(rep==true){++c ;System.out.println("N"+c+ ; "+N");}
+            if (rep == true) {
+                ++c;
+                System.out.println("N" + c + " : " + N);
+            }
+            ++N;
+
+        }
     }
+}
